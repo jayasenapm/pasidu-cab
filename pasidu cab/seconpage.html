@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js" type="text/javascript"></script>
+    <title>Document</title>
+    <style>
+    
+   
+body {
+  font-family: 'Lato', sans-serif;
+}
+.textContainer{
+display: flex;
+justify-content:space-around;
+flex-direction: row;
+flex-wrap: wrap;
+align-items: stretch;
+text-align: center;
+padding: 5px 5px 10px 5px;
+}
+.left{
+
+background-image:linear-gradient(to left,green,orange) ;
+flex-basis: 30%;
+margin-top: 10px;
+
+position: relative;
+padding: 5px 5px 50px 5px;
+}
+.imagecont{
+  width: 50%;
+  background-color: rgb(198, 202, 206);
+  border-radius: 10px;
+}
+.but{
+  position: absolute;
+  bottom:10px;
+  left: 40%;
+}
+.mid{
+ 
+  background-image:linear-gradient(to left,rgb(0, 23, 128),orange) ;
+  flex-basis: 30%;
+  margin-top: 10px;
+  position: relative;
+}
+.right{
+  
+  background-image:linear-gradient(to left,rgb(188, 15, 211),orange) ;
+  flex-basis: 30%;
+  margin-top: 10px;
+  position: relative;
+}
+@media screen and (max-width: 600px){
+  .textContainer{
+    flex-direction: column;
+  }
+}
+</style>
+<script>
+//Book Now page open & close
+var a=1;
+function openbook() {
+  if(a==1){
+    document.getElementById("child1").style.width = "100%";
+    document.getElementById("child2").style.width = "0";
+    a=2;
+  }else{
+    document.getElementById("child1").style.width = "0";
+    document.getElementById("child2").style.width = "100%";
+    a=1;
+  }
+    
+  }
+</script>
+</head>
+<body>
+
+  <div class="textContainer">
+    <div class="left">
+      <h1>i am left</h1>
+      
+      <img src="https://ae01.alicdn.com/kf/H3e98098af53d4aa88edfae4bf0486162g/Warme-Farben-Earring-for-Women-Made-with-Swarovski-Crystal-Round-Stone-Drop-Earring-Silver-925-Jewelry.jpg_220x220xz.jpg" alt="" class="imagecont" srcset="">
+      <p>The grow value is set to 1, which means that the 
+        element will stretch to fit any remaining space inside .
+        list-content. As everything else stays the same, the link gets 
+        pushed to the bottom of the div when the  element grows. Flex-basis is 
+        set to auto, so the free space is distributed based on the flex-grow value. </p>
+        <button class="but">Read More</button>
+    </div>
+    <div class="mid">
+        <h1>i am mid</h1>
+        <img src="https://ae01.alicdn.com/kf/H1f1b4e2724c847b791d6a78c4c1714ddw/Genuine-925-Sterling-Silver-Earrings-Round-White-Diamond-Stone-Wedding-Stud-Earrings-For-Women-Clear-Sapphire.jpg_220x220xz.jpg" alt="" class="imagecont" srcset="">
+        <p>The grow value is set to 1, which means that the 
+            element will stretch to fit any remaining space inside .
+            list-content. As everything else stays the same, the link gets</p>
+            <button class="but">Read More</button>
+    </div>
+    <div class="right">
+        <h1>i am right</h1>
+        <img src="https://ae01.alicdn.com/kf/HTB1VlH_bndYBeNkSmLyq6xfnVXaY/100-925-Sterling-Silver-Necklace-Austria-Amethyst-Pendant-Silver-Chain-For-Women-High-Jewelry.jpg_220x220xz.jpg" alt="" class="imagecont" srcset="">
+        <p> element will stretch to fit any remaining space inside .
+            list-content. As everything else stays the same, the link gets</p>
+            <button class="but">Read More</button>
+    </div>
+  </div>
+
+
+</body>
+</html>
